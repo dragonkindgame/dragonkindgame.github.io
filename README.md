@@ -1,5 +1,5 @@
-# Dragonkin Game Guide
+# Dragonkind Game Guide
 
 Static source for <https://dragonkindgame.github.io/>.
 
-This is an independent fan-made guide and is not affiliated with Eko Software or Nacon.
+This independent guide covers the official Dragonkind Threshing experience, retry timing, login help and dragon results. It is not affiliated with Rebecca Yarros, Yarros Ink or the official Dragonkind website.
