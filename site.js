@@ -76,6 +76,17 @@ timerReset?.addEventListener('click', () => {
 
 if (localStorage.getItem(storageKey)) beginTicking();
 
+document.querySelectorAll('[data-video-id]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube-nocookie.com/embed/${button.dataset.videoId}?autoplay=1`;
+    iframe.title = button.dataset.videoTitle;
+    iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    button.replaceWith(iframe);
+  }, { once: true });
+});
+
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') document.querySelectorAll('.nav-group[open]').forEach((group) => group.removeAttribute('open'));
 });

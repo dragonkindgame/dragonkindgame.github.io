@@ -104,7 +104,11 @@ td { color: var(--muted); }
 .video-notes > header > p:last-child { grid-column: 2; max-width: 740px; margin: .45rem 0 0; color: var(--muted); }
 .video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .video-grid figure { min-width: 0; margin: 0; background: var(--panel); border: 1px solid var(--line); }
-.video-grid iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
+.video-grid iframe, .video-launch { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
+.video-launch { position: relative; padding: 0; color: var(--paper); background: #0f2119; cursor: pointer; overflow: hidden; }
+.video-launch img { height: 100%; object-fit: cover; }
+.video-launch::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(8,18,13,.86)); }
+.video-launch span { position: absolute; left: 1rem; bottom: .85rem; z-index: 1; font: 850 .72rem/1.2 ui-sans-serif, system-ui, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
 .faq > div { max-width: 880px; margin-left: auto; }
 .faq details { border-top: 1px solid var(--line); }
 .faq details:last-child { border-bottom: 1px solid var(--line); }
